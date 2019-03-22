@@ -1,9 +1,9 @@
-package dp.brutalrecursive;
+package dp;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class CoinChange322 {
+public class CoinChange_322 {
 	public static void main(String[] args) {
 		int[] arr = { 186, 419, 83, 408, 6249 };
 		int amount = 1249;

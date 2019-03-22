@@ -1,6 +1,6 @@
-package cn.signit.daily;
+package dp;
 
-class Solution {
+class Coinchange2_518_another {
 
 	public static void main(String[] args) {
 		int[] coins = { 1, 2, 5 };

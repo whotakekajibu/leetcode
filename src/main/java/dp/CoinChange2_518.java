@@ -1,4 +1,4 @@
-package dp.brutalrecursive;
+package dp;
 
 import java.util.HashMap;
 import java.util.Map;

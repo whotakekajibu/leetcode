@@ -1,13 +1,13 @@
-package cn.signit.daily;
+package recursive;
 
-public class ScorefParentheses856 {
+public class ScorefParentheses_856 {
 
 	public static void main(String[] args) {
-		ScorefParentheses856 sp = new ScorefParentheses856();
-//		System.out.println(sp.scoreOfParentheses("(()(()))"));
-//		System.out.println(sp.scoreOfParentheses("()"));
-		System.out.println('a'-'A');
-		System.out.println('f'-'F');
+		ScorefParentheses_856 sp = new ScorefParentheses_856();
+		System.out.println(sp.scoreOfParentheses("(()(()))"));
+		System.out.println(sp.scoreOfParentheses("()"));
+		System.out.println('a' - 'A');
+		System.out.println('f' - 'F');
 
 	}
 

@@ -1,15 +1,13 @@
 package recursive;
 
 import java.util.ArrayList;
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
-public class LetterCasePermutation784 {
+public class LetterCasePermutation_784 {
 
 	public static void main(String[] args) {
 		String s = "ab";
-		LetterCasePermutation784 lcp = new LetterCasePermutation784();
+		LetterCasePermutation_784 lcp = new LetterCasePermutation_784();
 		lcp.letterCasePermutation(s);
 	}
 

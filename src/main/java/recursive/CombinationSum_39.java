@@ -2,7 +2,7 @@ package recursive;
 
 import java.util.List;
 
-public class CombinationSum39 {
+public class CombinationSum_39 {
 
 	public static void main(String[] args) {
 
