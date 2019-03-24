@@ -1,9 +1,9 @@
-package recursive;
+package recursive.backtracking.permutation_46;
 
 import java.util.ArrayList;
 import java.util.List;
 
-public class permutation {
+public class permutation_46 {
 	public static void main(String[] args) {
 		int[] st = { 1, 2, 3 };
 		permute(st).stream().forEach(System.out::println);

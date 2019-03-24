@@ -6,8 +6,8 @@ import java.util.Map;
 
 public class CoinChange_322 {
     public static void main(String[] args) {
-        int[] arr = {186, 419, 83, 408, 6249};
-        int amount = 1249;
+        int[] arr = {1, 2, 5};
+        System.out.println(backtracking(arr, 0, 11, 0));
 
     }
 
@@ -86,28 +86,28 @@ public class CoinChange_322 {
     }
 
     //////////////////////////dp（O(N*M)）///////////////////////////
-    public  int coinChangeNM(int[] arr, int amount) {
-        int len = arr.length+1;
-        int[][] dp = new int[len][amount+1];
-        for(int i = 0;i < len;i++){
+    public int coinChangeNM(int[] arr, int amount) {
+        int len = arr.length + 1;
+        int[][] dp = new int[len][amount + 1];
+        for (int i = 0; i < len; i++) {
             dp[i][0] = 0;
         }
-        for(int i = 1;i <amount+1;i++){
-            dp[len -1][i] = -1;
+        for (int i = 1; i < amount + 1; i++) {
+            dp[len - 1][i] = -1;
         }
-        for(int i = len - 2;i >= 0 ;i--){
-            for(int j = 1;j<=amount;j++){
+        for (int i = len - 2; i >= 0; i--) {
+            for (int j = 1; j <= amount; j++) {
                 int ans = Integer.MAX_VALUE;
-                if(j >= arr[i]){
+                if (j >= arr[i]) {
                     int pre = j - arr[i];
-                    if(dp[i+1][j] == dp[i][pre] || dp[i][pre] == -1){
-                        dp[i][j] = dp[i+1][j];
+                    if (dp[i + 1][j] == dp[i][pre] || dp[i][pre] == -1) {
+                        dp[i][j] = dp[i + 1][j];
                         continue;
                     }
-                    ans = Math.min(ans,dp[i][pre]+1);
+                    ans = Math.min(ans, dp[i][pre] + 1);
                 }
-                if(dp[i+1][j] != -1){
-                    ans = Math.min(ans,dp[i+1][j]);
+                if (dp[i + 1][j] != -1) {
+                    ans = Math.min(ans, dp[i + 1][j]);
                 }
                 ans = ans == Integer.MAX_VALUE ? -1 : ans;
                 dp[i][j] = ans;
@@ -115,7 +115,8 @@ public class CoinChange_322 {
         }
         return dp[0][amount];
     }
-////////////////////////////brutal force (O(2^N))//////////////////////
+
+    ////////////////////////////brutal force (O(2^N))//////////////////////
     private static int coinChange(int i, int[] arr, int amount) {
         if (amount == 0) return 0;
         if (i == arr.length) return -1;
@@ -131,16 +132,25 @@ public class CoinChange_322 {
 ////////////////////////////backtracking//////////////////////
 
     //arr元素 有序，从大大小排列
-    private int backtracking(int[] arr,int i,int amount,int ans){
-        if (amount == 0){
-            return ans;
-        }
-        if (i == arr.length){
+    private static int backtracking(int[] arr, int idx, int amount, int ans,int cnt) {
+        if (idx == arr.length - 1) {
+            if (amount % arr[idx] == 0){
+                ans = Math.min(ans,)
+            }
             return -1;
         }
-        for (int j = 0; j < ; j++) {
-            
+        int res = Integer.MAX_VALUE;
+            if (amount >= arr[idx]) {
+            int cnt = amount / arr[idx];
+            for (int i = 0; i < cnt; i++) {
+                int r = backtracking(arr, idx+1, amount - i * arr[idx], ans + i);
+                if (r != -1){
+                    res = Math.min(res,r);
+                }
+            }
+
         }
+        return res == Integer.MAX_VALUE ? -1 : res;
     }
 
 }
