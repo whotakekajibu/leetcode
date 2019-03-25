@@ -1,10 +1,10 @@
 package tree;
 
-import Utils.TreeNode;
-import Utils.Utils;
-
 import java.util.ArrayList;
 import java.util.List;
+
+import Utils.TreeNode;
+import Utils.Utils;
 
 public class BinaryTreePaths257 {
     public static void main(String[] args) {
