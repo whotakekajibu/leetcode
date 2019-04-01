@@ -2,8 +2,16 @@ package Utils;
 
 public class SortUtils {
 
+    public static void main(String[] args) {
+        int[] arr = {-20, -74, 29, 36, 70, 11, 34};
+        quickSort(arr);
+        for (int i : arr) {
+            System.out.println(i);
+        }
+    }
 
     public static void mergeSort(int[] arr) {
+        if (arr == null || arr.length == 0) return;
         helperMergeSort(arr, 0, arr.length - 1);
     }
 
@@ -66,7 +74,7 @@ public class SortUtils {
         int j = 0;  //控制右边数组
         //从左右两个临时数组中各取一个数比较，将较小的一个数复制回数组
         for (int k = from; k <= end; k++) {
-            if (left[i] <= right[j]) {
+            if (i < nl && left[i] <= right[j]) {
                 //哨兵值在这里得到体现，如果其中一个复制完，就会一直复制另外一个
                 a[k] = left[i];
                 i++;    //接着下一个
@@ -78,33 +86,15 @@ public class SortUtils {
     }
 
     public static void quickSort(int[] arr) {
+        if (arr == null || arr.length == 0) return;
         quickSortHelper(arr, 0, arr.length - 1);
     }
 
     public static void quickSortHelper(int[] arr, int start, int end) {
         if (start >= end) return;
-        int i = start, j = end;
-        int pivot = arr[i];
-        while (i < j) {
-            while (i <= j) {
-                if (arr[i] < pivot) {
-                    i++;
-                }
-            }
-            while (arr[j] > pivot) {
-                j--;
-            }
-            int temp = arr[i];
-            arr[i] = arr[j];
-            arr[j] = temp;
-            i++;
-            j--;
-        }
-        int temp = arr[j];
-        arr[j] = pivot;
-        arr[start] = temp;
-        quickSortHelper(arr, start, j);
-        quickSortHelper(arr, i, end);
+        int[] res = partion(arr, start, end);
+        quickSortHelper(arr, start, res[0] - 1);
+        quickSortHelper(arr, res[1] + 1, end);
     }
 
     public static void quickSortHelperRefactor(int[] arr, int start, int end) {
@@ -133,10 +123,24 @@ public class SortUtils {
         quickSortHelper(arr, i, end);
     }
 
-    public int[] partion(int[] arr, int start, int end) {
-        int less = start - 1, more = end + 1;
-        int cur = start;
-        return new int[]{};
+    public static int[] partion(int[] arr, int start, int end) {
+        int less = start - 1, more = end + 1, cur = start, target = arr[start];
+        while (cur < more) {
+            if (arr[cur] > target) {
+                swap(arr, --more, cur);
+            } else if (arr[cur] < target) {
+                swap(arr, ++less, cur++);
+            } else {
+                cur++;
+            }
+        }
+        return new int[]{less + 1, more - 1};
+    }
+
+    public static void swap(int[] arr, int i, int j) {
+        int tmp = arr[i];
+        arr[i] = arr[j];
+        arr[j] = tmp;
     }
 
     public static boolean isTrue(int[] arr, int index, int sum, int target) {
@@ -153,7 +157,7 @@ public class SortUtils {
         if (nums == null) return -1;
         int start = 0, end = nums.length - 1;
         while (start <= end) {
-            int mid = (start + end) / 2;
+            int mid = end + (end - start) / 2;
             if (nums[mid] == tar) return mid;
             else if (nums[mid] > tar) {
                 end = mid - 1;
@@ -164,10 +168,4 @@ public class SortUtils {
         return -1;
     }
 
-    public static void main(String[] args) {
-        int[] arr = {3, 7, 9, 13, 16, 17, 45, 50,51};
-//        System.out.println(isTrue(arr, 0, 0, 15));
-        System.out.println(binarySearch(arr, 13));
-
-    }
 }
