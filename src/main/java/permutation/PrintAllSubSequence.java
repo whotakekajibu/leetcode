@@ -3,9 +3,9 @@ package permutation;
 public class PrintAllSubSequence {
 
     public static void main(String[] args) {
-        char[] ch = "abcd".toCharArray();
+        char[] ch = "abc".toCharArray();
         printAllSubsequence(ch);
-        printAllSubsequence(ch,0,"");
+//        printAllSubsequence(ch,0,"");
     }
     private static void printAllSubsequence(char[] ch, int i, String s) {
         if (i == ch.length) {

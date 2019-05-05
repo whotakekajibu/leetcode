@@ -5,8 +5,12 @@ import java.util.Map;
 
 public class MaxlengthOfTargetInArray {
     public static void main(String[] args) {
-        int[] arr = {7, 3, 2, 1, 1, 7, -1, -6, -7};
-        System.out.println(maxLength(arr, 7));
+//        int[] arr = {7, 3, 2, 1, 1, 7, -1, -6, -7};
+//        System.out.println(maxLength(arr, 7));
+        int a = 1;
+        int b = 0;
+        b += a > 0 ? a : 0;
+        System.out.println(b);
     }
 
     public static int maxLength(int[] arr, int target) {

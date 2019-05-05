@@ -3,50 +3,65 @@ package Utils;
 import java.util.Arrays;
 
 public class SortChecker {
+
     public static void main(String[] args) {
+        int i = 1, b = 0;
+        try {
+            System.out.println(i / b);
+        } catch (Exception e) {
+            e.printStackTrace();
+            return;
+        }
+        System.out.println("wtf");
+    }
+
+    public static void Check(Sort sort) {
         int testTime = 500000;
         int size = 10;
         int value = 100;
-        boolean succeed = true;
         for (int i = 0; i < testTime; i++) {
-            int[] arr1 = generateRandomArray(size, value);
-            int[] arr2 = copyArray(arr1);
-            int[] arr3 = copyArray(arr1);
+            int[] forTesterSort = generateRandomArray(size, value);
+            int[] absoluteRight = copyArray(forTesterSort);
+            int[] original = copyArray(forTesterSort);
             try {
-                SortUtils.quickSort(arr1);
+                sort.sort(forTesterSort);
             } catch (Throwable e) {
-                printArray(arr3);
+                System.out.println("print the test array");
+                printArray(original);
                 e.printStackTrace();
                 return;
             }
-            rightMethod(arr2);
-            if (!isEqual(arr1, arr2)) {
-                succeed = false;
-                printArray(arr3);
-                break;
+            rightMethod(absoluteRight);
+            if (!isEqual(forTesterSort, absoluteRight)) {
+                System.out.println("the test array before sort");
+                printArray(original);
+                System.out.println("the test array after sort");
+                printArray(forTesterSort);
+                System.out.println("and what the arry should look like");
+                printArray(absoluteRight);
+                return;
             }
         }
-        System.out.println(succeed ? "Nice!" : "error----");
+        System.out.println("Nice! you have passed all the test case! Now  give your example");
         int[] arr = generateRandomArray(size, value);
         printArray(arr);
-        SortUtils.quickSort(arr);
+        sort.sort(arr);
         printArray(arr);
-
     }
 
-    public static void swap(int[] arr, int i, int j) {
+    private static void swap(int[] arr, int i, int j) {
         int tmp = arr[i];
         arr[i] = arr[j];
         arr[j] = tmp;
     }
 
     // for test
-    public static void rightMethod(int[] arr) {
+    private static void rightMethod(int[] arr) {
         Arrays.sort(arr);
     }
 
     // for test
-    public static int[] generateRandomArray(int size, int value) {
+    private static int[] generateRandomArray(int size, int value) {
         /*
          * Math.random() -> double [0,1)
          * (int) ((size + 1) * Math.random()) -> [0,size]整数
@@ -61,7 +76,7 @@ public class SortChecker {
     }
 
     // for test, copy a array
-    public static int[] copyArray(int[] arr) {
+    private static int[] copyArray(int[] arr) {
         if (arr == null)
             return null;
         int[] res = new int[arr.length];
@@ -72,7 +87,7 @@ public class SortChecker {
     }
 
     // for test
-    public static boolean isEqual(int[] arr1, int[] arr2) {
+    private static boolean isEqual(int[] arr1, int[] arr2) {
         if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null))
             return false;
         if (arr1 == null && arr2 == null)
@@ -86,10 +101,14 @@ public class SortChecker {
         return true;
     }
 
-    public static void printArray(int[] arr) {
+    private static void printArray(int[] arr) {
         if (arr == null)
             return;
         System.out.println(Arrays.toString(arr));
+    }
+
+    public interface Sort {
+        public void sort(int[] arr);
     }
 
 

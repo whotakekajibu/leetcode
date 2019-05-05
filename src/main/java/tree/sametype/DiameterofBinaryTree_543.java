@@ -1,4 +1,4 @@
-package tree;
+package tree.sametype;
 
 import Utils.TreeNode;
 
