@@ -5,8 +5,8 @@ import java.util.Queue;
 
 public class Utils {
     public static void main(String[] args) {
-        System.out.println(max3(2, 3, 1));
-        System.out.println(min3(2, 3, 1));
+        int[][] matrix = {{1}, {4}, {7}};
+        printMatrixZigzag(matrix);
     }
 
     public static int max3(int a, int b, int c) {
@@ -54,6 +54,46 @@ public class Utils {
     public static void printArray(int[] arr) {
         for (int i : arr) {
             System.out.print(i + " ");
+        }
+        System.out.println();
+    }
+
+    public static void printMatrixZigzag(int[][] matrix) {
+        int i = 0, j = 0, m = 0, n = 0;
+        boolean upper = true;
+        while (i < matrix.length && j < matrix[0].length) {
+            printByDiagonal(matrix, i, j, m, n, upper);
+            upper = !upper;
+            if (i < matrix.length - 1) {
+                i++;
+            } else {
+                j++;
+            }
+            if (n < matrix[0].length - 1) {
+                n++;
+            } else {
+                m++;
+            }
+        }
+    }
+
+    private static void printByDiagonal(int[][] matrix, int i, int j, int m, int n, boolean upper) {
+        if (i == m) {
+            while (j <= n) {
+                System.out.print(matrix[i][j++] + " ");
+            }
+        } else if (j == n) {
+            while (i <= m) {
+                System.out.print(matrix[i++][j] + " ");
+            }
+        } else if (upper) {
+            while (i >= m && j <= n) {
+                System.out.print(matrix[i--][j++] + " ");
+            }
+        } else {
+            while (i >= m && j <= n) {
+                System.out.print(matrix[m++][n--] + " ");
+            }
         }
         System.out.println();
     }
