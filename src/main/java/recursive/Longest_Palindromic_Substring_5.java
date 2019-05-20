@@ -22,6 +22,7 @@ public class Longest_Palindromic_Substring_5 {
 
     static Map<String, String> m = new HashMap<>();
 
+    //poor performance recursion
     static String helper(char[] chars, int i, int j) {
         String key = i + "_" + j;
         if (m.containsKey(key)) return m.get(key);
@@ -54,7 +55,15 @@ public class Longest_Palindromic_Substring_5 {
             }
         }
         String left = helper(chars, i + 1, j);
+        if (left.length() + 1 == chars.length) {
+            m.put(key, left);
+            return left;
+        }
         String right = helper(chars, i, j - 1);
+        if (right.length() + 1 == chars.length) {
+            m.put(key, right);
+            return right;
+        }
         if (res.length() < left.length()) {
             res = left;
         }
