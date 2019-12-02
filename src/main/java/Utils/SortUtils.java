@@ -7,8 +7,9 @@ public class SortUtils {
 	}
 
 	static void helperMergeSort(int[] arr, int start, int end) {
-		if (end == start)
+		if (end == start) {
 			return;
+		}
 		int mid = (start + end) / 2;
 		helperMergeSort(arr, start, mid);
 		helperMergeSort(arr, mid + 1, end);
@@ -149,14 +150,15 @@ public class SortUtils {
 	}
 
 	public static int binarySearch(int[] nums, int tar) {
-		if (nums == null)
+		if (nums == null) {
 			return -1;
+		}
 		int start = 0, end = nums.length - 1;
 		while (start <= end) {
 			int mid = (start + end) / 2;
-			if (nums[mid] == tar)
+			if (nums[mid] == tar) {
 				return mid;
-			else if (nums[mid] > tar) {
+			} else if (nums[mid] > tar) {
 				end = mid - 1;
 			} else {
 				start = mid + 1;

@@ -63,8 +63,8 @@ public class SortChecker {
     // for test
     private static int[] generateRandomArray(int size, int value) {
         /*
-         * Math.random() -> double [0,1)
-         * (int) ((size + 1) * Math.random()) -> [0,size]整数
+         * MathUtils.random() -> double [0,1)
+         * (int) ((size + 1) * MathUtils.random()) -> [0,size]整数
          * */
         // 生成长度随机[0, size]的数组
         int[] arr = new int[(int) ((size + 1) * Math.random())];
@@ -77,8 +77,9 @@ public class SortChecker {
 
     // for test, copy a array
     private static int[] copyArray(int[] arr) {
-        if (arr == null)
+        if (arr == null) {
             return null;
+        }
         int[] res = new int[arr.length];
         for (int i = 0; i < arr.length; i++) {
             res[i] = arr[i];
@@ -88,22 +89,27 @@ public class SortChecker {
 
     // for test
     private static boolean isEqual(int[] arr1, int[] arr2) {
-        if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null))
+        if ((arr1 == null && arr2 != null) || (arr1 != null && arr2 == null)) {
             return false;
-        if (arr1 == null && arr2 == null)
+        }
+        if (arr1 == null && arr2 == null) {
             return true;
-        if (arr1.length != arr2.length)
+        }
+        if (arr1.length != arr2.length) {
             return false;
+        }
         for (int i = 0; i < arr1.length; i++) {
-            if (arr1[i] != arr2[i])
+            if (arr1[i] != arr2[i]) {
                 return false;
+            }
         }
         return true;
     }
 
     private static void printArray(int[] arr) {
-        if (arr == null)
+        if (arr == null) {
             return;
+        }
         System.out.println(Arrays.toString(arr));
     }
 

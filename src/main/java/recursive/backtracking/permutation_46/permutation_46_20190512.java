@@ -7,7 +7,9 @@ public class permutation_46_20190512 {
 
     static List<String> permutation(int[] num) {
         List<String> res = new ArrayList<>(fac(num.length));
-        if (num == null || num.length == 0) return res;
+        if (num == null || num.length == 0) {
+            return res;
+        }
         dfs(res, num, 0, new StringBuilder());
         return res;
     }
@@ -18,7 +20,9 @@ public class permutation_46_20190512 {
     }
 
     static int fac(int n) {
-        if (n <= 2) return n;
+        if (n <= 2) {
+            return n;
+        }
         return n * fac(n - 1);
     }
 
@@ -39,7 +43,9 @@ public class permutation_46_20190512 {
     }
 
     static void swap(int[] nums, int i, int j) {
-        if (i == j) return;
+        if (i == j) {
+            return;
+        }
         int tmp = nums[i];
         nums[i] = nums[j];
         nums[j] = tmp;

@@ -106,7 +106,7 @@ class BinaryTreeMaximumPathSum_124 {
                     }
                 }
             }
-            //Math.max(left.childSum,right.childSum)+root.val,left.childSum+right.childSum+root.val,Math.max(left.sum,right.sum),sum
+            //MathUtils.max(left.childSum,right.childSum)+root.val,left.childSum+right.childSum+root.val,MathUtils.max(left.sum,right.sum),sum
         }
         if (sum < root.val) {
             sum = root.val;
