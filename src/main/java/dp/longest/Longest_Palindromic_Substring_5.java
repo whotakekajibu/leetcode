@@ -1,4 +1,4 @@
-package dp;
+package dp.longest;
 
 public class Longest_Palindromic_Substring_5 {
     public static String longestPalindromeSubseq(String s) {

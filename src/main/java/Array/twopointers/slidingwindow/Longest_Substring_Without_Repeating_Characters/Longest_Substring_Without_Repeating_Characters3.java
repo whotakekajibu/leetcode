@@ -1,4 +1,4 @@
-package Array.twopointers.slidingwindow;
+package Array.twopointers.slidingwindow.Longest_Substring_Without_Repeating_Characters;
 
 import java.util.HashMap;
 import java.util.Map;

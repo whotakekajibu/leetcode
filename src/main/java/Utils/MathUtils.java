@@ -10,8 +10,9 @@ import java.util.Map;
 public class MathUtils {
     public static void main(String[] args) {
 //        System.out.println(lengthOfLongestSubstring("abcabcbb"));
-        System.out.println(add("193","456"));
+        System.out.println(add("193", "456"));
     }
+
     public static String add(String... strings) {
         int[] first = convertStringArrayToIntArray(strings[0]);
         for (int i = 1; i < strings.length; i++) {
@@ -116,4 +117,6 @@ public class MathUtils {
             to[i + 1] = from[i];
         }
     }
+
+
 }

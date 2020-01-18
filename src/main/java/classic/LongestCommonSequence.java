@@ -2,7 +2,7 @@ package classic;
 
 import java.util.Scanner;
 
-public class LCS {
+public class LongestCommonSequence {
 
     public static void main(String[] args) {
         //abcfbc abfcab
@@ -19,8 +19,12 @@ public class LCS {
     static int[][] m;
 
     static int LCS(char[] a, int i, char[] b, int j) {
-        if (i < 0 || j < 0) return 0;
-        if (m[i][j] != 0) return m[i][j];
+        if (i < 0 || j < 0) {
+            return 0;
+        }
+        if (m[i][j] != 0) {
+            return m[i][j];
+        }
 
         if (a[i] == b[j]) {
             return m[i][j] = 1 + LCS(a, i - 1, b, j - 1);
