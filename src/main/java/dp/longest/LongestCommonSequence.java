@@ -1,4 +1,4 @@
-package longgest;
+package dp.longest;
 
 public class LongestCommonSequence {
 	public static void main(String[] args) {
@@ -18,11 +18,13 @@ public class LongestCommonSequence {
 
 	int LCSLength(String X, String Y, int m, int n) {
 		// return if we have reached the end of either sequence
-		if (m == 0 || n == 0)
+		if (m == 0 || n == 0) {
 			return 0;
+		}
 		// if last character of X and Y matches
-		if (X.charAt(m) == Y.charAt(n))
+		if (X.charAt(m) == Y.charAt(n)) {
 			return LCSLength(X, Y, m - 1, n - 1) + 1;
+		}
 		// else if last character of X and Y don't match
 		return Math.max(LCSLength(X, Y, m, n - 1), LCSLength(X, Y, m - 1, n));
 	}

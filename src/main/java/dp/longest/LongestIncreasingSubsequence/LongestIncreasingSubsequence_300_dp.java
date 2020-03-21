@@ -1,6 +1,6 @@
-package dp;
+package dp.longest.LongestIncreasingSubsequence;
 
-public class Longestcommonsequence_300 {
+public class LongestIncreasingSubsequence_300_dp {
 
 	public static void main(String[] args) {
 
