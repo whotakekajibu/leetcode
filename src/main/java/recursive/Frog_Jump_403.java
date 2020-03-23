@@ -9,15 +9,15 @@ public class Frog_Jump_403 {
 
     public static boolean canCross(int[] arr) {
 //        return helper(stones, 1, 1);
-        if (arr == null || arr.length == 0) return false;
-        if (arr.length == 1) return true;
-        boolean[] reach = new boolean[arr.length];
-        int[] k = new int[arr[arr.length - 1]];
-        reach[0] = true;
-        if ()
+//        if (arr == null || arr.length == 0) return false;
+//        if (arr.length == 1) return true;
+//        boolean[] reach = new boolean[arr.length];
+//        int[] k = new int[arr[arr.length - 1]];
+//        reach[0] = true;
+//        if ()
         //dp[i][j]
 //        int[][] dp = new int[arr.length][arr[arr.length - 1]];
-
+        return true;
     }
 
     private static boolean helper(int[] arr, int idx, int k) {
