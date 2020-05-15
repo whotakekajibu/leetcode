@@ -4,7 +4,6 @@ import java.util.*;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/12/2 23:23
  **/
 public class WordBreakII_140_20191212_nonbacktrack {

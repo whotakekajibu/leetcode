@@ -2,7 +2,6 @@ package bits;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/12/15 10:18
  **/
 public class Reverse_Bits_190_20191215 {

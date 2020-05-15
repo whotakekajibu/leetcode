@@ -1,27 +1,26 @@
 package Utils;
 
-import java.util.LinkedList;
-import java.util.Queue;
+import java.util.*;
 
 public class Utils {
-    public static void main(String[] args) {
-        int[][] matrix = {{1}, {4}, {7}};
-        printMatrixZigzag(matrix);
-    }
 
     public static int max3(int a, int b, int c) {
-        if (a < b)
+        if (a < b) {
             a = b;
-        if (a < c)
+        }
+        if (a < c) {
             a = c;
+        }
         return a;
     }
 
     public static int min3(int a, int b, int c) {
-        if (a > b)
+        if (a > b) {
             a = b;
-        if (a > c)
+        }
+        if (a > c) {
             a = c;
+        }
         return a;
     }
 
@@ -45,7 +44,9 @@ public class Utils {
     }
 
     public static void preOrder(TreeNode root) {
-        if (root == null) return;
+        if (root == null) {
+            return;
+        }
         System.out.println(root.val);
         preOrder(root.left);
         preOrder(root.right);
@@ -127,6 +128,30 @@ public class Utils {
                 System.out.printf("%d ", a[i][j]);
             }
             System.out.println();
+        }
+    }
+
+    public static List<String> generateStringsSpecifyCharacters(List<Character> characters, int len, int size) {
+        int min = 0;
+        int max = characters.size() - 1;
+        int range = max - min + 1;
+        List<String> res = new ArrayList<>(size);
+        for (int i = 0; i < size; i++) {
+            StringBuilder sb = new StringBuilder(len);
+            for (int j = 0; j < len; j++) {
+                int rand = (int) (Math.random() * range) + min;
+                sb.append(characters.get(rand));
+            }
+            res.add(sb.toString());
+        }
+        return res;
+    }
+
+    public static void main(String[] args) {
+        List<Character> characters = Arrays.asList('(',')');
+        List<String> strings = generateStringsSpecifyCharacters(characters,6,10);
+        for (String string : strings) {
+            System.out.println(string);
         }
     }
 

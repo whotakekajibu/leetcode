@@ -2,7 +2,6 @@ package Utils;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/1/3 10:16
  **/
 public class HttpUtils {

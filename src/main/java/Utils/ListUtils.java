@@ -2,7 +2,6 @@ package Utils;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/12/12 10:12
  **/
 public class ListUtils {

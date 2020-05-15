@@ -6,7 +6,6 @@ import java.util.stream.Collectors;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/10/20 23:16
  **/
 public class BigDataOperationChecker {

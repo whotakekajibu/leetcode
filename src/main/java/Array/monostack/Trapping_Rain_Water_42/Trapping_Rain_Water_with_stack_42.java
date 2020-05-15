@@ -1,14 +1,13 @@
-package Array.monostack;
+package Array.monostack.Trapping_Rain_Water_42;
 
 import java.util.ArrayDeque;
 import java.util.Deque;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/1 8:14
  **/
-public class Trapping_Rain_Water_42 {
+public class Trapping_Rain_Water_with_stack_42 {
     public static void main(String[] args) {
         int[] arr = {0, 1, 0, 2, 1, 0, 1, 3, 2, 1, 2, 1};
         System.out.println(trap(arr));

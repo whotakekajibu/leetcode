@@ -7,7 +7,6 @@ import java.util.Deque;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/1 11:18
  **/
 public class Max_Chunks_To_Make_Sorted_with_stack_II_768 {

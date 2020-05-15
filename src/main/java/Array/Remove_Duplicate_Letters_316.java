@@ -7,7 +7,6 @@ import java.util.Map;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/3/21 16:31
  **/
 public class Remove_Duplicate_Letters_316 {
