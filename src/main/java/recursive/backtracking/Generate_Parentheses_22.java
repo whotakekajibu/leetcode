@@ -15,7 +15,9 @@ public class Generate_Parentheses_22 {
     }
 
     static void dfs(List<String> res, StringBuilder sb, int open, int close, int n) {
-        if (open > n || close > n) return;
+        if (open > n || close > n) {
+            return;
+        }
         if (open == close && open == n) {
             res.add(sb.toString());
             return;

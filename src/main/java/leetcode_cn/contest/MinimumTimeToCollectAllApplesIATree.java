@@ -11,6 +11,7 @@ public class MinimumTimeToCollectAllApplesIATree {
     public static void main(String[] args) {
         int[][] edges = {{0, 1}, {0, 2}, {1, 4}, {1, 5}, {2, 3}, {2, 6}};
         List<Boolean> hasApple = Arrays.asList(false, false, true, false, true, true, false);
+//        List<Boolean> hasApple = Arrays.asList(false, false, true, false, false, true, false);
         System.out.println(minTime(7, edges, hasApple));
     }
 
@@ -26,25 +27,36 @@ public class MinimumTimeToCollectAllApplesIATree {
                 m.put(edge[0], ls);
             }
         }
-        return helper(0, 0, m, hasApple);
+        int ans = 0;
+        for (Integer i : m.get(0)) {
+            ans += helper(i, m, hasApple);
+        }
+        return ans;
     }
 
-    public static int helper(int depth, int startNode, Map<Integer, List<Integer>> m, List<Boolean> apple) {
+    public static int helper(int startNode, Map<Integer, List<Integer>> m, List<Boolean> apple) {
         if (!m.containsKey(startNode)) {
             //叶子节点
             if (apple.get(startNode)) {
-                return 2 * depth;
+                return 2;
             }
             return 0;
         }
         List<Integer> twoNodes = m.get(startNode);
         int ans = 0;
         if (apple.get(startNode)) {
-            ans += 2 * depth;
+            ans += 2;
             //当前节点有苹果
-            ans += helper(1, twoNodes.get(0), m, apple) + helper(1, twoNodes.get(1), m, apple);
+            for (Integer i : twoNodes) {
+                ans += helper(i, m, apple);
+            }
         } else {
-            ans += helper(depth + 1, twoNodes.get(0), m, apple) + helper(depth + 1, twoNodes.get(1), m, apple);
+            for (Integer i : twoNodes) {
+                ans += helper(i, m, apple);
+            }
+            if (ans > 0) {
+                ans += 2;
+            }
         }
         return ans;
     }
