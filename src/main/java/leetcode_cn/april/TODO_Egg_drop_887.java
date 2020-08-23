@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/11 21:55
  **/
 public class TODO_Egg_drop_887 {

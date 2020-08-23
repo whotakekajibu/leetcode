@@ -4,7 +4,6 @@ import java.util.*;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/12/1 12:46
  **/
 public class CombinationOfPhoneNumber_20191201 {

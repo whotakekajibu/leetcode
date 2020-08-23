@@ -7,7 +7,6 @@ import java.util.Map;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/1/14 11:52
  **/
 public class Minimum_Distance_to_Type_a_Word_Using_Two_Fingers_1320 {

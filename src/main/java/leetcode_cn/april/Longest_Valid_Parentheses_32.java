@@ -5,7 +5,6 @@ import java.util.Set;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/23 21:57
  **/
 public class Longest_Valid_Parentheses_32 {

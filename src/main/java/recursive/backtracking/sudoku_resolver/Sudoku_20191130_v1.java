@@ -2,7 +2,6 @@ package recursive.backtracking.sudoku_resolver;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/11/30 23:50
  **/
 public class Sudoku_20191130_v1 {

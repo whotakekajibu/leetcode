@@ -131,6 +131,13 @@ public class Utils {
         }
     }
 
+    public static void printOneDimensionalArray(int[] a) {
+        for (int i = 0; i < a.length; i++) {
+            System.out.print(a[i] + ", ");
+        }
+        System.out.println();
+    }
+
     public static List<String> generateStringsSpecifyCharacters(List<Character> characters, int len, int size) {
         int min = 0;
         int max = characters.size() - 1;
@@ -148,8 +155,8 @@ public class Utils {
     }
 
     public static void main(String[] args) {
-        List<Character> characters = Arrays.asList('(',')');
-        List<String> strings = generateStringsSpecifyCharacters(characters,6,10);
+        List<Character> characters = Arrays.asList('(', ')');
+        List<String> strings = generateStringsSpecifyCharacters(characters, 6, 10);
         for (String string : strings) {
             System.out.println(string);
         }

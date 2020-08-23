@@ -2,7 +2,6 @@ package leetcode_cn.may;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/5/9 7:47
  **/
 public class Sqrtx_69 {

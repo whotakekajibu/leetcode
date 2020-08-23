@@ -4,7 +4,6 @@ import Utils.TreeNode;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/5/7 19:35
  **/
 public class Subtree_of_another_tree_572 {

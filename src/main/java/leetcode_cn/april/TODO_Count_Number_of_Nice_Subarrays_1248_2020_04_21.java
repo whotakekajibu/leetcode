@@ -5,7 +5,6 @@ import java.util.LinkedList;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/21 14:54
  **/
 public class TODO_Count_Number_of_Nice_Subarrays_1248_2020_04_21 {

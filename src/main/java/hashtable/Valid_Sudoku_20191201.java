@@ -5,7 +5,6 @@ import java.util.Set;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/12/1 21:14
  **/
 public class Valid_Sudoku_20191201 {

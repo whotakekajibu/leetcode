@@ -2,7 +2,6 @@ package leetcode_cn.april;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/5/6 22:29
  **/
 public class Reverse_pairs_in_arr_51  {

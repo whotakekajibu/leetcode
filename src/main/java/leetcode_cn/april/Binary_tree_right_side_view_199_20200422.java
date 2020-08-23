@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/22 21:11
  **/
 public class Binary_tree_right_side_view_199_20200422 {

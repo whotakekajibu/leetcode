@@ -2,7 +2,6 @@ package recursive.tail;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/11/22 22:52
  **/
 public class Factorial {

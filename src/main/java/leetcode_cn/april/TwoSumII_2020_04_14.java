@@ -4,7 +4,6 @@ import Utils.ListNode;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/14 10:18
  **/
 public class TwoSumII_2020_04_14 {

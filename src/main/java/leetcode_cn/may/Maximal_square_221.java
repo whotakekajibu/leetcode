@@ -2,7 +2,6 @@ package leetcode_cn.may;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/5/8 20:28
  **/
 public class Maximal_square_221 {

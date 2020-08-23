@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/5/10 10:30
  **/
 public class Main {

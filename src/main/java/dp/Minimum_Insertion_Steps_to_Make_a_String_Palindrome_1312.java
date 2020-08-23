@@ -6,7 +6,6 @@ import java.util.Arrays;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/1/10 14:51
  **/
 public class Minimum_Insertion_Steps_to_Make_a_String_Palindrome_1312 {

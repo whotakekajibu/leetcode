@@ -5,7 +5,6 @@ import java.util.LinkedList;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/18 21:20
  **/
 public class MinJump_LCP09 {

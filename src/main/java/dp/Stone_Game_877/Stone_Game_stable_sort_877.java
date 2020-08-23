@@ -2,7 +2,6 @@ package dp.Stone_Game_877;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/6 12:10
  **/
 public class Stone_Game_stable_sort_877 {

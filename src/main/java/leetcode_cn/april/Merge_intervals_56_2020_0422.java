@@ -5,7 +5,6 @@ import java.util.Comparator;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/22 22:14
  **/
 public class Merge_intervals_56_2020_0422 {

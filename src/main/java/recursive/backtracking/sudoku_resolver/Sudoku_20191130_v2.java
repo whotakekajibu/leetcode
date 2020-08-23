@@ -5,7 +5,6 @@ import java.util.Set;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2019/11/30 23:50
  **/
 public class Sudoku_20191130_v2 {

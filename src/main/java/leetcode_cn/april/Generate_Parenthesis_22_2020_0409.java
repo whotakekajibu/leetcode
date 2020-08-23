@@ -8,7 +8,6 @@ import java.util.Set;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/9 17:38
  **/
 public class Generate_Parenthesis_22_2020_0409 {

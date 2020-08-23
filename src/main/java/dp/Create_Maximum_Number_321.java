@@ -6,7 +6,6 @@ import java.util.Deque;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/3 15:39
  **/
 public class Create_Maximum_Number_321 {

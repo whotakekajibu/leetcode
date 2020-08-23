@@ -2,7 +2,6 @@ package leetcode_cn.may;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/5/7 23:02
  **/
 public class Minimum_cost_for_tickets_983 {

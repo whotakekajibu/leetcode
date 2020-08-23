@@ -2,7 +2,6 @@ package leetcode_cn.april;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/27 22:24
  **/
 public class Search_in_rotated_sorted_array_33 {

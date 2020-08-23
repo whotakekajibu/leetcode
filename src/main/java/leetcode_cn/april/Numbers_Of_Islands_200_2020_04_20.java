@@ -2,7 +2,6 @@ package leetcode_cn.april;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/20 20:40
  **/
 public class Numbers_Of_Islands_200_2020_04_20 {

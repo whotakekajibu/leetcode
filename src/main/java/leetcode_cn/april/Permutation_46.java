@@ -5,7 +5,6 @@ import java.util.List;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/25 9:37
  **/
 public class Permutation_46 {

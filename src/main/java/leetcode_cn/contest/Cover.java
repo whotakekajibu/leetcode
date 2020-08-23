@@ -2,7 +2,6 @@ package leetcode_cn.contest;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/19 19:11
  **/
 public class Cover {

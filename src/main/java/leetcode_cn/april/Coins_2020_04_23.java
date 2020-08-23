@@ -2,7 +2,6 @@ package leetcode_cn.april;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/23 22:17
  **/
 public class Coins_2020_04_23 {

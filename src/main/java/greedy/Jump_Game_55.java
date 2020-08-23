@@ -2,7 +2,6 @@ package greedy;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/17 16:46
  **/
 public class Jump_Game_55 {

@@ -2,7 +2,6 @@ package recursive;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/1/12 0:03
  **/
 public class Decrypt_String_from_Alphabet_to_Integer_Mapping_1309 {

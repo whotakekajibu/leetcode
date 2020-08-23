@@ -18,7 +18,9 @@ public class Letter_Combinations_of_a_Phone_Number_17 {
 
     static void dfs(String digits, int cur, List<String> res, StringBuilder sb) {
         if (cur == digits.length()) {
-            if (sb.length() == 0) return;
+            if (sb.length() == 0) {
+                return;
+            }
             res.add(sb.toString());
             return;
         }

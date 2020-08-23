@@ -5,7 +5,6 @@ import java.util.Set;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/13 22:07
  **/
 public class TODO_Twitter {

@@ -10,7 +10,6 @@ import java.util.List;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/4/15 22:18
  **/
 public class Matrix01_542 {

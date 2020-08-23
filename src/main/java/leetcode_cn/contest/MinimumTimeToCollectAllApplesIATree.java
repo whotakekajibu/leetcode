@@ -4,7 +4,6 @@ import java.util.*;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/5/15 20:40
  **/
 public class MinimumTimeToCollectAllApplesIATree {

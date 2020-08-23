@@ -4,7 +4,6 @@ import java.util.Arrays;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/1/3 22:49
  **/
 public class LongestIncreasingSubsequence_300_20190103_recursive {

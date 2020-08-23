@@ -9,7 +9,6 @@ import java.util.List;
 
 /**
  * @Description
- * @Author ericning@wezhuiyi.com
  * @Date 2020/5/13 14:25
  **/
 public class Binary_tree_level_order_traversal_102_20200513 {
